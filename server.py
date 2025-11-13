@@ -3,6 +3,7 @@ from transformers import pipeline
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 import torch
+import uvicorn
 
 app = FastAPI(title = "NPC Dialogue API for pokemAhn")
 
@@ -32,3 +33,5 @@ async def generate_text(request: PromptRequest):
     )[0]["generated_text"]
     return {"response": result}
 
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
