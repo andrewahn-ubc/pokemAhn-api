@@ -9,7 +9,7 @@ app = FastAPI(title = "NPC Dialogue API for pokemAhn")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8080"],  # or ["*"] for all
+    allow_origins=["http://localhost:8080", "https://pokemahn.netlify.app"],  # or ["*"] for all
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
