@@ -15,7 +15,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-model = pipeline("text-generation", "HuggingFaceTB/SmolLM2-135M-Instruct", device=-1 temperature=0.7)
+model = pipeline("text-generation", "HuggingFaceTB/SmolLM2-135M-Instruct", device=-1)
 
 
 class PromptRequest(BaseModel):
