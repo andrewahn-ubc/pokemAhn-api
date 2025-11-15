@@ -26,7 +26,7 @@ async def generate_text(request: PromptRequest):
     prompt = request.prompt
     result = model(
         prompt,
-        max_new_tokens=24,    # limit response length
+        max_new_tokens=23,    # limit response length
         do_sample=True,       # enable stochastic sampling
         top_p=0.9,            # nucleus sampling
         temperature=0.5       # add creativity
